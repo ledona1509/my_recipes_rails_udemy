@@ -2,7 +2,7 @@
   <h1>Welcome to Leo Recipes Page</h1>
   <h2>This is the home page for the Professional Ruby on Rails Developer Course on Udemy</h2>
   
-  <%= link_to "Sign up today!", "", class: "btn btn-lg btn-success" %>
+  <%= link_to "Sign up today!", register_path, class: "btn btn-lg btn-success" %>
 </div>
 <div class="row">
   <div class="col-sm-4">
@@ -14,10 +14,10 @@
   </div>
   <div class="col-sm-4">
     <h3 class="midrow">
-      View Recipes as Guest User
+      Sign in to your account
     </h3>
-    <h2 class="left">Browse and view recipes as a guest and Sign up later</h2>
-    <p><%= link_to "Browse Recipe Listings", recipes_path, class: "btn btn-warning btn-lg" %></p>
+    <h2 class="left">Add/update your recipes/create reviews/like-dislike recipes and much more v.v...</h2>
+    <p><%= link_to "Login", login_path, class: "btn btn-warning btn-lg" %></p>
   </div>
   <div class="col-sm-4">
     <h3 class="midrow">
