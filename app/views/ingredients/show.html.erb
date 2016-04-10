@@ -1,4 +1,4 @@
-<%= render 'shared/page_title', title: "All Recipes We Have" %>
+<%= render 'shared/page_title', title: "Recipes for: " + @ingredient.name %>
 
 <ul class="nav nav-tabs">
   <li class="active">
@@ -9,7 +9,7 @@
   </li>
 </ul>
 
-<%= will_paginate %>
+<%= will_paginate @recipes %>
 
 <% @recipes.each do |recipe| %>
   <div class="row">
@@ -30,7 +30,7 @@
         <span class="quiet"><small>created <%= time_ago_in_words(recipe.created_at) %> ago, </small></span>
         <span class="quiet"><small>updated <%= time_ago_in_words(recipe.updated_at) %> ago</small></span>
       </p>
-      <%= render "like", recipe: recipe %>
+      <%= render "/recipes/like", recipe: recipe %>
     </div>
     
     <div class="col-md-2">
@@ -41,4 +41,4 @@
   <hr/>
 <% end %>
 
-<%= will_paginate %>
+<%= will_paginate @recipes %>
